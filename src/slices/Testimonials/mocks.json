@@ -1,0 +1,229 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "What Our Customers Say"
+						}
+					}
+				]
+			},
+			"testimonials": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "testimonial-1",
+						"value": [
+							[
+								"image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+										"width": 4000,
+										"height": 4000
+									},
+									"url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?rect=0%2C0%2C4000%2C4000&w=400&h=400",
+									"width": 400,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Sarah Johnson portrait"
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Sarah Johnson",
+									"type": "Text"
+								}
+							],
+							[
+								"review",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "This product has completely transformed the way we work. The quality is exceptional and the customer service is outstanding. Highly recommend to anyone looking for a reliable solution!"
+											}
+										}
+									]
+								}
+							],
+							[
+								"company",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "TechStart Inc.",
+									"type": "Text"
+								}
+							],
+							[
+								"rating",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "5",
+									"type": "Number"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "testimonial-2",
+						"value": [
+							[
+								"image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+										"width": 4000,
+										"height": 4000
+									},
+									"url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?rect=0%2C0%2C4000%2C4000&w=400&h=400",
+									"width": 400,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Michael Chen portrait"
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Michael Chen",
+									"type": "Text"
+								}
+							],
+							[
+								"review",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "I've been using this service for over a year now and it never disappoints. The attention to detail and continuous improvements show that they really care about their customers."
+											}
+										}
+									]
+								}
+							],
+							[
+								"company",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Creative Solutions",
+									"type": "Text"
+								}
+							],
+							[
+								"rating",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "5",
+									"type": "Number"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "testimonial-3",
+						"value": [
+							[
+								"image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+										"width": 4000,
+										"height": 4000
+									},
+									"url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?rect=0%2C0%2C4000%2C4000&w=400&h=400",
+									"width": 400,
+									"height": 400,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "Emma Rodriguez portrait"
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Emma Rodriguez",
+									"type": "Text"
+								}
+							],
+							[
+								"review",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Fantastic experience from start to finish! The team was professional, responsive, and delivered exactly what we needed. Our productivity has increased significantly since we started using this."
+											}
+										}
+									]
+								}
+							],
+							[
+								"company",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Global Dynamics",
+									"type": "Text"
+								}
+							],
+							[
+								"rating",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "4",
+									"type": "Number"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
