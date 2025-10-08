@@ -1,0 +1,128 @@
+{
+  "id": "pricing_card",
+  "type": "SharedSlice",
+  "name": "PricingCard",
+  "description": "A pricing slice with testimonial, pricing card, and CTA sections",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "testimonialQuote": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Testimonial Quote",
+            "single": "paragraph",
+            "placeholder": "Enter testimonial quote"
+          }
+        },
+        "testimonialAvatar": {
+          "type": "Image",
+          "config": {
+            "label": "Testimonial Avatar",
+            "constraint": {
+              "width": 100,
+              "height": 100
+            }
+          }
+        },
+        "testimonialName": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial Name",
+            "placeholder": "Enter name"
+          }
+        },
+        "testimonialSubtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial Subtitle",
+            "placeholder": "Enter subtitle"
+          }
+        },
+        "tagline": {
+          "type": "Text",
+          "config": {
+            "label": "Tagline",
+            "placeholder": "Enter tagline"
+          }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "single": "heading2",
+            "placeholder": "Enter heading"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "multi": "paragraph,strong,em,hyperlink",
+            "placeholder": "Enter description"
+          }
+        },
+        "planName": {
+          "type": "Text",
+          "config": {
+            "label": "Plan Name",
+            "placeholder": "Enter plan name"
+          }
+        },
+        "price": {
+          "type": "Text",
+          "config": {
+            "label": "Price",
+            "placeholder": "Enter price (e.g., $0/mo)"
+          }
+        },
+        "priceSuffix": {
+          "type": "Text",
+          "config": {
+            "label": "Price Suffix",
+            "placeholder": "Enter price suffix (e.g., or $0 yearly)"
+          }
+        },
+        "pricingCta": {
+          "type": "Link",
+          "config": {
+            "label": "Pricing CTA",
+            "allowText": true,
+            "placeholder": "Enter CTA link",
+            "select": null
+          }
+        },
+        "bottomHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Bottom Heading",
+            "single": "heading2",
+            "placeholder": "Enter bottom heading"
+          }
+        },
+        "bottomDescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Bottom Description",
+            "multi": "paragraph,strong,em,hyperlink",
+            "placeholder": "Enter bottom description"
+          }
+        },
+        "bottomCta": {
+          "type": "Link",
+          "config": {
+            "label": "Bottom CTA",
+            "allowText": true,
+            "placeholder": "Enter bottom CTA link",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

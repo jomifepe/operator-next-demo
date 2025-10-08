@@ -69,7 +69,10 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PageDocumentDataSlicesSlice = RichTextSlice | TestimonialsSlice;
+type PageDocumentDataSlicesSlice =
+  | RichTextSlice
+  | TestimonialsSlice
+  | PricingCardSlice;
 
 /**
  * Content for Page documents
@@ -142,6 +145,193 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Primary content in *PricingCard → Default → Primary*
+ */
+export interface PricingCardSliceDefaultPrimary {
+  /**
+   * Testimonial Quote field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter testimonial quote
+   * - **API ID Path**: pricing_card.default.primary.testimonialQuote
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  testimonialQuote: prismic.RichTextField;
+
+  /**
+   * Testimonial Avatar field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing_card.default.primary.testimonialAvatar
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  testimonialAvatar: prismic.ImageField<never>;
+
+  /**
+   * Testimonial Name field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter name
+   * - **API ID Path**: pricing_card.default.primary.testimonialName
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonialName: prismic.KeyTextField;
+
+  /**
+   * Testimonial Subtitle field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter subtitle
+   * - **API ID Path**: pricing_card.default.primary.testimonialSubtitle
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonialSubtitle: prismic.KeyTextField;
+
+  /**
+   * Tagline field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter tagline
+   * - **API ID Path**: pricing_card.default.primary.tagline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  tagline: prismic.KeyTextField;
+
+  /**
+   * Heading field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter heading
+   * - **API ID Path**: pricing_card.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Description field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter description
+   * - **API ID Path**: pricing_card.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Plan Name field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter plan name
+   * - **API ID Path**: pricing_card.default.primary.planName
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  planName: prismic.KeyTextField;
+
+  /**
+   * Price field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter price (e.g., $0/mo)
+   * - **API ID Path**: pricing_card.default.primary.price
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  price: prismic.KeyTextField;
+
+  /**
+   * Price Suffix field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter price suffix (e.g., or $0 yearly)
+   * - **API ID Path**: pricing_card.default.primary.priceSuffix
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  priceSuffix: prismic.KeyTextField;
+
+  /**
+   * Pricing CTA field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Enter CTA link
+   * - **API ID Path**: pricing_card.default.primary.pricingCta
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  pricingCta: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Bottom Heading field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter bottom heading
+   * - **API ID Path**: pricing_card.default.primary.bottomHeading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  bottomHeading: prismic.RichTextField;
+
+  /**
+   * Bottom Description field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter bottom description
+   * - **API ID Path**: pricing_card.default.primary.bottomDescription
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  bottomDescription: prismic.RichTextField;
+
+  /**
+   * Bottom CTA field in *PricingCard → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Enter bottom CTA link
+   * - **API ID Path**: pricing_card.default.primary.bottomCta
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  bottomCta: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for PricingCard Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingCardSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PricingCardSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PricingCard*
+ */
+type PricingCardSliceVariation = PricingCardSliceDefault;
+
+/**
+ * PricingCard Shared Slice
+ *
+ * - **API ID**: `pricing_card`
+ * - **Description**: A pricing slice with testimonial, pricing card, and CTA sections
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingCardSlice = prismic.SharedSlice<
+  "pricing_card",
+  PricingCardSliceVariation
+>;
 
 /**
  * Primary content in *RichText → Default → Primary*
@@ -325,6 +515,10 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      PricingCardSlice,
+      PricingCardSliceDefaultPrimary,
+      PricingCardSliceVariation,
+      PricingCardSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,

@@ -1,0 +1,181 @@
+.pricingCard {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 4em 2em;
+  background-color: #f9f9f9;
+}
+
+/* Testimonial Section */
+.testimonial {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4em;
+}
+
+.testimonialQuote {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin-bottom: 2em;
+}
+
+.testimonialAvatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonialAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonialName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin: 0 0 0.25em;
+}
+
+.testimonialSubtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Pricing Section */
+.pricingSection {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4em;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ff5722;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1em;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 0.75em;
+}
+
+.heading h2 {
+  margin: 0;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2.5em;
+}
+
+.description p {
+  margin: 0;
+}
+
+/* Pricing Card */
+.card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2.5em 2em;
+  background-color: #fff;
+  border: 2px dashed #ddd;
+  border-radius: 16px;
+}
+
+.planName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.75em;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.25em;
+  line-height: 1;
+}
+
+.priceSuffix {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0 0 1.5em;
+}
+
+.ctaButton {
+  display: inline-block;
+  width: 100%;
+  padding: 1em 2em;
+  background-color: #ff5722;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #e64a19;
+}
+
+/* Bottom Section */
+.bottomSection {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bottomHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 0.75em;
+}
+
+.bottomHeading h2 {
+  margin: 0;
+}
+
+.bottomDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2em;
+}
+
+.bottomDescription p {
+  margin: 0;
+}
+
+.bottomCtaButton {
+  display: inline-block;
+  padding: 1em 2.5em;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.bottomCtaButton:hover {
+  background-color: #333;
+}
