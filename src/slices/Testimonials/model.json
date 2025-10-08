@@ -1,0 +1,72 @@
+{
+  "id": "testimonials",
+  "type": "SharedSlice",
+  "name": "Testimonials",
+  "description": "A testimonials section displaying customer reviews with images, names, companies, and ratings",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "single": "heading2",
+            "placeholder": "Section heading..."
+          }
+        },
+        "testimonials": {
+          "type": "Group",
+          "config": {
+            "label": "Testimonials",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image",
+                  "constraint": {
+                    "width": 400,
+                    "height": 400
+                  }
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": "Customer name..."
+                }
+              },
+              "review": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Review",
+                  "multi": "paragraph,strong,em",
+                  "placeholder": "Customer review..."
+                }
+              },
+              "company": {
+                "type": "Text",
+                "config": {
+                  "label": "Company",
+                  "placeholder": "Company name..."
+                }
+              },
+              "rating": {
+                "type": "Number",
+                "config": {
+                  "label": "Rating"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
