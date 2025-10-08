@@ -32,6 +32,9 @@
             },
             "testimonials": {
               "type": "SharedSlice"
+            },
+            "pricing_block": {
+              "type": "SharedSlice"
             }
           }
         }
