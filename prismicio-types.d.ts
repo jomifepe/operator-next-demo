@@ -69,7 +69,10 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PageDocumentDataSlicesSlice = RichTextSlice | TestimonialsSlice;
+type PageDocumentDataSlicesSlice =
+  | RichTextSlice
+  | TestimonialsSlice
+  | PricingBlockSlice;
 
 /**
  * Content for Page documents
@@ -142,6 +145,213 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Primary content in *PricingBlock → Default → Primary*
+ */
+export interface PricingBlockSliceDefaultPrimary {
+  /**
+   * Testimonial Quote field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the testimonial quote...
+   * - **API ID Path**: pricing_block.default.primary.testimonial_quote
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  testimonial_quote: prismic.RichTextField;
+
+  /**
+   * Testimonial Avatar field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing_block.default.primary.testimonial_avatar
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  testimonial_avatar: prismic.ImageField<never>;
+
+  /**
+   * Testimonial Author Name field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Author name
+   * - **API ID Path**: pricing_block.default.primary.testimonial_author_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonial_author_name: prismic.KeyTextField;
+
+  /**
+   * Testimonial Author Description field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Author description
+   * - **API ID Path**: pricing_block.default.primary.testimonial_author_description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonial_author_description: prismic.KeyTextField;
+
+  /**
+   * Pricing Tagline field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Tagline
+   * - **API ID Path**: pricing_block.default.primary.pricing_tagline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  pricing_tagline: prismic.KeyTextField;
+
+  /**
+   * Pricing Heading field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Main heading
+   * - **API ID Path**: pricing_block.default.primary.pricing_heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  pricing_heading: prismic.RichTextField;
+
+  /**
+   * Pricing Description field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Description text...
+   * - **API ID Path**: pricing_block.default.primary.pricing_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  pricing_description: prismic.RichTextField;
+
+  /**
+   * Plan Name field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., Free — Just explore
+   * - **API ID Path**: pricing_block.default.primary.plan_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  plan_name: prismic.KeyTextField;
+
+  /**
+   * Price field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., $0/mo
+   * - **API ID Path**: pricing_block.default.primary.price
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  price: prismic.KeyTextField;
+
+  /**
+   * Price Description field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., or $0 yearly
+   * - **API ID Path**: pricing_block.default.primary.price_description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  price_description: prismic.KeyTextField;
+
+  /**
+   * Pricing CTA Label field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Button text
+   * - **API ID Path**: pricing_block.default.primary.pricing_cta_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  pricing_cta_label: prismic.KeyTextField;
+
+  /**
+   * Pricing CTA Link field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing_block.default.primary.pricing_cta_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  pricing_cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Bottom Heading field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Bottom section heading
+   * - **API ID Path**: pricing_block.default.primary.bottom_heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  bottom_heading: prismic.RichTextField;
+
+  /**
+   * Bottom Description field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Bottom section description...
+   * - **API ID Path**: pricing_block.default.primary.bottom_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  bottom_description: prismic.RichTextField;
+
+  /**
+   * Bottom CTA Label field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Button text
+   * - **API ID Path**: pricing_block.default.primary.bottom_cta_label
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  bottom_cta_label: prismic.KeyTextField;
+
+  /**
+   * Bottom CTA Link field in *PricingBlock → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing_block.default.primary.bottom_cta_link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  bottom_cta_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for PricingBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingBlockSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PricingBlockSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PricingBlock*
+ */
+type PricingBlockSliceVariation = PricingBlockSliceDefault;
+
+/**
+ * PricingBlock Shared Slice
+ *
+ * - **API ID**: `pricing_block`
+ * - **Description**: A comprehensive pricing section with testimonial, pricing card, and call-to-action
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingBlockSlice = prismic.SharedSlice<
+  "pricing_block",
+  PricingBlockSliceVariation
+>;
 
 /**
  * Primary content in *RichText → Default → Primary*
@@ -325,6 +535,10 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      PricingBlockSlice,
+      PricingBlockSliceDefaultPrimary,
+      PricingBlockSliceVariation,
+      PricingBlockSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
