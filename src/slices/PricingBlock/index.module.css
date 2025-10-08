@@ -1,0 +1,183 @@
+.pricingBlock {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+}
+
+/* Testimonial Section */
+.testimonialSection {
+  text-align: center;
+  margin-bottom: 6rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonialQuote {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.testimonialQuote p {
+  margin: 0;
+}
+
+.testimonialImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.testimonialName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.testimonialTagline {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Pricing Section */
+.pricingSection {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 6rem;
+}
+
+.pricingTagline {
+  color: #ff5722;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.pricingHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.pricingHeading h2 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.pricingDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.pricingDescription p {
+  margin: 0;
+}
+
+/* Pricing Card */
+.pricingCard {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.planName {
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.priceNote {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.pricingButton {
+  display: inline-block;
+  background-color: #ff5722;
+  color: #fff;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.938rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  width: 100%;
+  text-align: center;
+}
+
+.pricingButton:hover {
+  background-color: #e64a19;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.ctaHeading h2 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.ctaDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.ctaDescription p {
+  margin: 0.5rem 0;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.938rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.ctaButton:hover {
+  background-color: #333;
+}

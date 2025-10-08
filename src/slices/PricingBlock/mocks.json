@@ -1,0 +1,141 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"testimonial_quote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem ipsum dolor sit amet consectetur. Ornare libero massa congue blandit. Ac eros vitae nibh metus. Iaculis auctor cras phasellus sit luctus bibendum."
+						}
+					}
+				]
+			},
+			"testimonial_image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+					"width": 4272,
+					"height": 2848
+				},
+				"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?rect=712%2C0%2C2848%2C2848&w=200&h=200",
+				"width": 200,
+				"height": 200,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 712,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "women"
+			},
+			"testimonial_name": {
+				"__TYPE__": "FieldContent",
+				"value": "Denis",
+				"type": "Text"
+			},
+			"testimonial_tagline": {
+				"__TYPE__": "FieldContent",
+				"value": "A fake user, but real insight",
+				"type": "Text"
+			},
+			"pricing_tagline": {
+				"__TYPE__": "FieldContent",
+				"value": "Tagline",
+				"type": "Text"
+			},
+			"pricing_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Yes, this pricing block is also a Slice®."
+						}
+					}
+				]
+			},
+			"pricing_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Try changing prices and descriptions in the Page Builder. Want to add new features to this layout? That's a job for Slice Machine."
+						}
+					}
+				]
+			},
+			"plan_name": {
+				"__TYPE__": "FieldContent",
+				"value": "Free — Just explore",
+				"type": "Text"
+			},
+			"price": {
+				"__TYPE__": "FieldContent",
+				"value": "$0/mo",
+				"type": "Text"
+			},
+			"price_note": {
+				"__TYPE__": "FieldContent",
+				"value": "or $0 yearly",
+				"type": "Text"
+			},
+			"pricing_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Edit this section now",
+				"type": "Text"
+			},
+			"pricing_button_link": {
+				"__TYPE__": "LinkContent",
+				"key": "16aace65-a464-4c11-9ca5-4e16c895d69c",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"cta_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Ready to go further?"
+						}
+					}
+				]
+			},
+			"cta_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "This starter gives you full editing power for content. To customize the layout, structure, or create new Slices, install Slice Machine locally."
+						}
+					}
+				]
+			},
+			"cta_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "Edit this section now",
+				"type": "Text"
+			},
+			"cta_button_link": {
+				"__TYPE__": "LinkContent",
+				"key": "a541634b-40e0-4b6f-af07-6934f279185c",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			}
+		},
+		"items": []
+	}
+]
