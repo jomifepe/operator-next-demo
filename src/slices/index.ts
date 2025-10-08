@@ -4,5 +4,6 @@ import dynamic from "next/dynamic";
 
 export const components = {
   rich_text: dynamic(() => import("./RichText")),
+  testimonial_pricing: dynamic(() => import("./TestimonialPricing")),
   testimonials: dynamic(() => import("./Testimonials")),
 };

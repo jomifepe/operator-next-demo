@@ -1,0 +1,107 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"testimonial_quote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem ipsum dolor sit amet consectetur. Ornare libero massa congue blandit. Ac eros vitae nibh metus. Iaculis auctor cras phasellus sit luctus bibendum."
+						}
+					}
+				]
+			},
+			"testimonial_avatar": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+					"width": 3424,
+					"height": 3424
+				},
+				"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?rect=0%2C0%2C3424%2C3424&w=200&h=200",
+				"width": 200,
+				"height": 200,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "Profile picture of Denis"
+			},
+			"testimonial_author": {
+				"__TYPE__": "FieldContent",
+				"value": "Denis",
+				"type": "Text"
+			},
+			"testimonial_subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "A fake user, but real insight",
+				"type": "Text"
+			},
+			"pricing_tagline": {
+				"__TYPE__": "FieldContent",
+				"value": "Tagline",
+				"type": "Text"
+			},
+			"pricing_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Yes, this pricing block is also a Slice®."
+						}
+					}
+				]
+			},
+			"pricing_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Try changing prices and descriptions in the Page Builder. Want to add new features to this layout? That's a job for Slice Machine."
+						}
+					}
+				]
+			},
+			"plan_name": {
+				"__TYPE__": "FieldContent",
+				"value": "Free — Just explore",
+				"type": "Text"
+			},
+			"price_amount": {
+				"__TYPE__": "FieldContent",
+				"value": "$0",
+				"type": "Text"
+			},
+			"price_period": {
+				"__TYPE__": "FieldContent",
+				"value": "/mo",
+				"type": "Text"
+			},
+			"yearly_price": {
+				"__TYPE__": "FieldContent",
+				"value": "or $0 yearly",
+				"type": "Text"
+			},
+			"cta_button": {
+				"__TYPE__": "LinkContent",
+				"key": "8922aa91-9587-4bc6-a035-d9da4ed6ea9e",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id",
+					"text": "Edit this section now"
+				}
+			}
+		},
+		"items": []
+	}
+]

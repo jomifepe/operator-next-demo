@@ -1,0 +1,109 @@
+{
+  "id": "testimonial_pricing",
+  "type": "SharedSlice",
+  "name": "TestimonialPricing",
+  "description": "A combined testimonial and pricing section",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "testimonial_quote": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Testimonial Quote",
+            "multi": "paragraph,strong,em",
+            "placeholder": "Enter the testimonial quote..."
+          }
+        },
+        "testimonial_avatar": {
+          "type": "Image",
+          "config": {
+            "label": "Testimonial Avatar",
+            "constraint": {
+              "width": 200,
+              "height": 200
+            }
+          }
+        },
+        "testimonial_author": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial Author",
+            "placeholder": "Author name"
+          }
+        },
+        "testimonial_subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial Subtitle",
+            "placeholder": "Author subtitle or description"
+          }
+        },
+        "pricing_tagline": {
+          "type": "Text",
+          "config": {
+            "label": "Pricing Tagline",
+            "placeholder": "Tagline"
+          }
+        },
+        "pricing_heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Pricing Heading",
+            "multi": "paragraph,strong,em",
+            "placeholder": "Enter the pricing heading..."
+          }
+        },
+        "pricing_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Pricing Description",
+            "multi": "paragraph,strong,em",
+            "placeholder": "Enter the pricing description..."
+          }
+        },
+        "plan_name": {
+          "type": "Text",
+          "config": {
+            "label": "Plan Name",
+            "placeholder": "e.g., Free — Just explore"
+          }
+        },
+        "price_amount": {
+          "type": "Text",
+          "config": {
+            "label": "Price Amount",
+            "placeholder": "e.g., $0"
+          }
+        },
+        "price_period": {
+          "type": "Text",
+          "config": {
+            "label": "Price Period",
+            "placeholder": "e.g., /mo"
+          }
+        },
+        "yearly_price": {
+          "type": "Text",
+          "config": {
+            "label": "Yearly Price",
+            "placeholder": "e.g., or $0 yearly"
+          }
+        },
+        "cta_button": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Button",
+            "allowText": true,
+            "select": "document"
+          }
+        }
+      }
+    }
+  ]
+}

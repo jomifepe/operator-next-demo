@@ -69,7 +69,10 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PageDocumentDataSlicesSlice = RichTextSlice | TestimonialsSlice;
+type PageDocumentDataSlicesSlice =
+  | RichTextSlice
+  | TestimonialsSlice
+  | TestimonialPricingSlice;
 
 /**
  * Content for Page documents
@@ -186,6 +189,161 @@ type RichTextSliceVariation = RichTextSliceDefault;
 export type RichTextSlice = prismic.SharedSlice<
   "rich_text",
   RichTextSliceVariation
+>;
+
+/**
+ * Primary content in *TestimonialPricing → Default → Primary*
+ */
+export interface TestimonialPricingSliceDefaultPrimary {
+  /**
+   * Testimonial Quote field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the testimonial quote...
+   * - **API ID Path**: testimonial_pricing.default.primary.testimonial_quote
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  testimonial_quote: prismic.RichTextField;
+
+  /**
+   * Testimonial Avatar field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial_pricing.default.primary.testimonial_avatar
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  testimonial_avatar: prismic.ImageField<never>;
+
+  /**
+   * Testimonial Author field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Author name
+   * - **API ID Path**: testimonial_pricing.default.primary.testimonial_author
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonial_author: prismic.KeyTextField;
+
+  /**
+   * Testimonial Subtitle field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Author subtitle or description
+   * - **API ID Path**: testimonial_pricing.default.primary.testimonial_subtitle
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonial_subtitle: prismic.KeyTextField;
+
+  /**
+   * Pricing Tagline field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Tagline
+   * - **API ID Path**: testimonial_pricing.default.primary.pricing_tagline
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  pricing_tagline: prismic.KeyTextField;
+
+  /**
+   * Pricing Heading field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the pricing heading...
+   * - **API ID Path**: testimonial_pricing.default.primary.pricing_heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  pricing_heading: prismic.RichTextField;
+
+  /**
+   * Pricing Description field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the pricing description...
+   * - **API ID Path**: testimonial_pricing.default.primary.pricing_description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  pricing_description: prismic.RichTextField;
+
+  /**
+   * Plan Name field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., Free — Just explore
+   * - **API ID Path**: testimonial_pricing.default.primary.plan_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  plan_name: prismic.KeyTextField;
+
+  /**
+   * Price Amount field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., $0
+   * - **API ID Path**: testimonial_pricing.default.primary.price_amount
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  price_amount: prismic.KeyTextField;
+
+  /**
+   * Price Period field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., /mo
+   * - **API ID Path**: testimonial_pricing.default.primary.price_period
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  price_period: prismic.KeyTextField;
+
+  /**
+   * Yearly Price field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: e.g., or $0 yearly
+   * - **API ID Path**: testimonial_pricing.default.primary.yearly_price
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  yearly_price: prismic.KeyTextField;
+
+  /**
+   * CTA Button field in *TestimonialPricing → Default → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial_pricing.default.primary.cta_button
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  cta_button: prismic.ContentRelationshipField;
+}
+
+/**
+ * Default variation for TestimonialPricing Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TestimonialPricingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimonialPricingSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TestimonialPricing*
+ */
+type TestimonialPricingSliceVariation = TestimonialPricingSliceDefault;
+
+/**
+ * TestimonialPricing Shared Slice
+ *
+ * - **API ID**: `testimonial_pricing`
+ * - **Description**: A combined testimonial and pricing section
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TestimonialPricingSlice = prismic.SharedSlice<
+  "testimonial_pricing",
+  TestimonialPricingSliceVariation
 >;
 
 /**
@@ -329,6 +487,10 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      TestimonialPricingSlice,
+      TestimonialPricingSliceDefaultPrimary,
+      TestimonialPricingSliceVariation,
+      TestimonialPricingSliceDefault,
       TestimonialsSlice,
       TestimonialsSliceDefaultPrimaryTestimonialsItem,
       TestimonialsSliceDefaultPrimary,
