@@ -1,0 +1,89 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "testimonial",
+		"primary": {
+			"quote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem ipsum dolor sit amet consectetur. Ornare libero massa congue blandit. Ac eros vitae nibh metus. Iaculis auctor cras phasellus sit luctus bibendum."
+						}
+					}
+				]
+			},
+			"avatar": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+					"width": 3024,
+					"height": 3778
+				},
+				"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C377%2C3024%2C3024&w=300&h=300",
+				"width": 300,
+				"height": 300,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 377
+					},
+					"background": "transparent"
+				},
+				"alt": "Avatar image"
+			},
+			"authorName": {
+				"__TYPE__": "FieldContent",
+				"value": "Denis",
+				"type": "Text"
+			},
+			"authorRole": {
+				"__TYPE__": "FieldContent",
+				"value": "A fake user, but real insight",
+				"type": "Text"
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "callToAction",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Ready to go further?"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "This starter gives you full editing power for content. To customize the layout, structure, or create new Slices, install Slice Machine locally."
+						}
+					}
+				]
+			},
+			"button": {
+				"__TYPE__": "LinkContent",
+				"key": "b6451014-3efa-49ed-91a2-960520ee38c6",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "Edit this section now"
+				}
+			}
+		},
+		"items": []
+	}
+]

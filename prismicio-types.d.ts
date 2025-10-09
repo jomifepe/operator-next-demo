@@ -73,7 +73,8 @@ type PageDocumentDataSlicesSlice =
   | RichTextSlice
   | TestimonialsSlice
   | PricingBlockSlice
-  | TestimonialSlice;
+  | TestimonialSlice
+  | TestimonialCtaSlice;
 
 /**
  * Content for Page documents
@@ -148,213 +149,6 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
- * Primary content in *PricingBlock → Default → Primary*
- */
-export interface PricingBlockSliceDefaultPrimary {
-  /**
-   * Testimonial Quote field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Enter the testimonial quote...
-   * - **API ID Path**: pricing_block.default.primary.testimonial_quote
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  testimonial_quote: prismic.RichTextField;
-
-  /**
-   * Testimonial Avatar field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: pricing_block.default.primary.testimonial_avatar
-   * - **Documentation**: https://prismic.io/docs/fields/image
-   */
-  testimonial_avatar: prismic.ImageField<never>;
-
-  /**
-   * Testimonial Author Name field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Author name
-   * - **API ID Path**: pricing_block.default.primary.testimonial_author_name
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  testimonial_author_name: prismic.KeyTextField;
-
-  /**
-   * Testimonial Author Description field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Author description
-   * - **API ID Path**: pricing_block.default.primary.testimonial_author_description
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  testimonial_author_description: prismic.KeyTextField;
-
-  /**
-   * Pricing Tagline field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Tagline
-   * - **API ID Path**: pricing_block.default.primary.pricing_tagline
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  pricing_tagline: prismic.KeyTextField;
-
-  /**
-   * Pricing Heading field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Main heading
-   * - **API ID Path**: pricing_block.default.primary.pricing_heading
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  pricing_heading: prismic.RichTextField;
-
-  /**
-   * Pricing Description field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Description text...
-   * - **API ID Path**: pricing_block.default.primary.pricing_description
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  pricing_description: prismic.RichTextField;
-
-  /**
-   * Plan Name field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: e.g., Free — Just explore
-   * - **API ID Path**: pricing_block.default.primary.plan_name
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  plan_name: prismic.KeyTextField;
-
-  /**
-   * Price field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: e.g., $0/mo
-   * - **API ID Path**: pricing_block.default.primary.price
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  price: prismic.KeyTextField;
-
-  /**
-   * Price Description field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: e.g., or $0 yearly
-   * - **API ID Path**: pricing_block.default.primary.price_description
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  price_description: prismic.KeyTextField;
-
-  /**
-   * Pricing CTA Label field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Button text
-   * - **API ID Path**: pricing_block.default.primary.pricing_cta_label
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  pricing_cta_label: prismic.KeyTextField;
-
-  /**
-   * Pricing CTA Link field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: pricing_block.default.primary.pricing_cta_link
-   * - **Documentation**: https://prismic.io/docs/fields/link
-   */
-  pricing_cta_link: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
-  >;
-
-  /**
-   * Bottom Heading field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Bottom section heading
-   * - **API ID Path**: pricing_block.default.primary.bottom_heading
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  bottom_heading: prismic.RichTextField;
-
-  /**
-   * Bottom Description field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Bottom section description...
-   * - **API ID Path**: pricing_block.default.primary.bottom_description
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  bottom_description: prismic.RichTextField;
-
-  /**
-   * Bottom CTA Label field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Button text
-   * - **API ID Path**: pricing_block.default.primary.bottom_cta_label
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  bottom_cta_label: prismic.KeyTextField;
-
-  /**
-   * Bottom CTA Link field in *PricingBlock → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: pricing_block.default.primary.bottom_cta_link
-   * - **Documentation**: https://prismic.io/docs/fields/link
-   */
-  bottom_cta_link: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
-  >;
-}
-
-/**
- * Default variation for PricingBlock Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default variation
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type PricingBlockSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<PricingBlockSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *PricingBlock*
- */
-type PricingBlockSliceVariation = PricingBlockSliceDefault;
-
-/**
- * PricingBlock Shared Slice
- *
- * - **API ID**: `pricing_block`
- * - **Description**: A comprehensive pricing section with testimonial, pricing card, and call-to-action
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type PricingBlockSlice = prismic.SharedSlice<
-  "pricing_block",
-  PricingBlockSliceVariation
->;
-
-/**
  * Primary content in *RichText → Default → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
@@ -400,190 +194,128 @@ export type RichTextSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Testimonial → Default → Primary*
+ * Primary content in *TestimonialCta → Testimonial → Primary*
  */
-export interface TestimonialSliceDefaultPrimary {
+export interface TestimonialCtaSliceTestimonialPrimary {
   /**
-   * Quote field in *Testimonial → Default → Primary*
+   * Quote field in *TestimonialCta → Testimonial → Primary*
    *
    * - **Field Type**: Rich Text
-   * - **Placeholder**: Enter the testimonial quote...
-   * - **API ID Path**: testimonial.default.primary.quote
+   * - **Placeholder**: Enter the testimonial quote
+   * - **API ID Path**: testimonial_cta.testimonial.primary.quote
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   quote: prismic.RichTextField;
 
   /**
-   * Avatar field in *Testimonial → Default → Primary*
+   * Avatar field in *TestimonialCta → Testimonial → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: testimonial.default.primary.avatar
+   * - **API ID Path**: testimonial_cta.testimonial.primary.avatar
    * - **Documentation**: https://prismic.io/docs/fields/image
    */
   avatar: prismic.ImageField<never>;
 
   /**
-   * Author Name field in *Testimonial → Default → Primary*
+   * Author Name field in *TestimonialCta → Testimonial → Primary*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: Enter author name...
-   * - **API ID Path**: testimonial.default.primary.author_name
+   * - **Placeholder**: Enter author name
+   * - **API ID Path**: testimonial_cta.testimonial.primary.authorName
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
-  author_name: prismic.KeyTextField;
+  authorName: prismic.KeyTextField;
 
   /**
-   * Author Description field in *Testimonial → Default → Primary*
+   * Author Role field in *TestimonialCta → Testimonial → Primary*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: Enter author description...
-   * - **API ID Path**: testimonial.default.primary.author_description
+   * - **Placeholder**: Enter author role or description
+   * - **API ID Path**: testimonial_cta.testimonial.primary.authorRole
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
-  author_description: prismic.KeyTextField;
+  authorRole: prismic.KeyTextField;
 }
 
 /**
- * Default variation for Testimonial Slice
+ * Testimonial variation for TestimonialCta Slice
  *
- * - **API ID**: `default`
- * - **Description**: Default testimonial variation
+ * - **API ID**: `testimonial`
+ * - **Description**: Testimonial variation with quote, avatar, author name and role
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type TestimonialSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<TestimonialSliceDefaultPrimary>,
+export type TestimonialCtaSliceTestimonial = prismic.SharedSliceVariation<
+  "testimonial",
+  Simplify<TestimonialCtaSliceTestimonialPrimary>,
   never
 >;
 
 /**
- * Slice variation for *Testimonial*
+ * Primary content in *TestimonialCta → Call to Action → Primary*
  */
-type TestimonialSliceVariation = TestimonialSliceDefault;
-
-/**
- * Testimonial Shared Slice
- *
- * - **API ID**: `testimonial`
- * - **Description**: A testimonial section with a quote, avatar image, author name, and description
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type TestimonialSlice = prismic.SharedSlice<
-  "testimonial",
-  TestimonialSliceVariation
->;
-
-/**
- * Item in *Testimonials → Default → Primary → Testimonials*
- */
-export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
+export interface TestimonialCtaSliceCallToActionPrimary {
   /**
-   * Image field in *Testimonials → Default → Primary → Testimonials*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonials[].image
-   * - **Documentation**: https://prismic.io/docs/fields/image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Name field in *Testimonials → Default → Primary → Testimonials*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Customer name...
-   * - **API ID Path**: testimonials.default.primary.testimonials[].name
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  name: prismic.KeyTextField;
-
-  /**
-   * Review field in *Testimonials → Default → Primary → Testimonials*
+   * Heading field in *TestimonialCta → Call to Action → Primary*
    *
    * - **Field Type**: Rich Text
-   * - **Placeholder**: Customer review...
-   * - **API ID Path**: testimonials.default.primary.testimonials[].review
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  review: prismic.RichTextField;
-
-  /**
-   * Company field in *Testimonials → Default → Primary → Testimonials*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Company name...
-   * - **API ID Path**: testimonials.default.primary.testimonials[].company
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  company: prismic.KeyTextField;
-
-  /**
-   * Rating field in *Testimonials → Default → Primary → Testimonials*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonials[].rating
-   * - **Documentation**: https://prismic.io/docs/fields/number
-   */
-  rating: prismic.NumberField;
-}
-
-/**
- * Primary content in *Testimonials → Default → Primary*
- */
-export interface TestimonialsSliceDefaultPrimary {
-  /**
-   * Heading field in *Testimonials → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Section heading...
-   * - **API ID Path**: testimonials.default.primary.heading
+   * - **Placeholder**: Enter heading
+   * - **API ID Path**: testimonial_cta.callToAction.primary.heading
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   heading: prismic.RichTextField;
 
   /**
-   * Testimonials field in *Testimonials → Default → Primary*
+   * Description field in *TestimonialCta → Call to Action → Primary*
    *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonials[]
-   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter description text
+   * - **API ID Path**: testimonial_cta.callToAction.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
-  testimonials: prismic.GroupField<
-    Simplify<TestimonialsSliceDefaultPrimaryTestimonialsItem>
-  >;
+  description: prismic.RichTextField;
+
+  /**
+   * Button field in *TestimonialCta → Call to Action → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Select button link
+   * - **API ID Path**: testimonial_cta.callToAction.primary.button
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
- * Default variation for Testimonials Slice
+ * Call to Action variation for TestimonialCta Slice
  *
- * - **API ID**: `default`
- * - **Description**: Default variation
+ * - **API ID**: `callToAction`
+ * - **Description**: CTA variation with heading, description and button
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type TestimonialsSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<TestimonialsSliceDefaultPrimary>,
+export type TestimonialCtaSliceCallToAction = prismic.SharedSliceVariation<
+  "callToAction",
+  Simplify<TestimonialCtaSliceCallToActionPrimary>,
   never
 >;
 
 /**
- * Slice variation for *Testimonials*
+ * Slice variation for *TestimonialCta*
  */
-type TestimonialsSliceVariation = TestimonialsSliceDefault;
+type TestimonialCtaSliceVariation =
+  | TestimonialCtaSliceTestimonial
+  | TestimonialCtaSliceCallToAction;
 
 /**
- * Testimonials Shared Slice
+ * TestimonialCta Shared Slice
  *
- * - **API ID**: `testimonials`
- * - **Description**: A testimonials section displaying customer reviews with images, names, companies, and ratings
+ * - **API ID**: `testimonial_cta`
+ * - **Description**: A versatile slice for displaying testimonials or call-to-action sections
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type TestimonialsSlice = prismic.SharedSlice<
-  "testimonials",
-  TestimonialsSliceVariation
+export type TestimonialCtaSlice = prismic.SharedSlice<
+  "testimonial_cta",
+  TestimonialCtaSliceVariation
 >;
 
 declare module "@prismicio/client" {
@@ -611,23 +343,16 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
-      PricingBlockSlice,
-      PricingBlockSliceDefaultPrimary,
-      PricingBlockSliceVariation,
-      PricingBlockSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
-      TestimonialSlice,
-      TestimonialSliceDefaultPrimary,
-      TestimonialSliceVariation,
-      TestimonialSliceDefault,
-      TestimonialsSlice,
-      TestimonialsSliceDefaultPrimaryTestimonialsItem,
-      TestimonialsSliceDefaultPrimary,
-      TestimonialsSliceVariation,
-      TestimonialsSliceDefault,
+      TestimonialCtaSlice,
+      TestimonialCtaSliceTestimonialPrimary,
+      TestimonialCtaSliceCallToActionPrimary,
+      TestimonialCtaSliceVariation,
+      TestimonialCtaSliceTestimonial,
+      TestimonialCtaSliceCallToAction,
     };
   }
 }
