@@ -38,6 +38,9 @@
             },
             "testimonial": {
               "type": "SharedSlice"
+            },
+            "testimonial_cta": {
+              "type": "SharedSlice"
             }
           }
         }

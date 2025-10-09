@@ -3,8 +3,6 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  pricing_block: dynamic(() => import("./PricingBlock")),
   rich_text: dynamic(() => import("./RichText")),
-  testimonial: dynamic(() => import("./Testimonial")),
-  testimonials: dynamic(() => import("./Testimonials")),
+  testimonial_cta: dynamic(() => import("./TestimonialCta")),
 };
