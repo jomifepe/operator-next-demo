@@ -30,18 +30,6 @@
             "rich_text": {
               "type": "SharedSlice"
             },
-            "testimonials": {
-              "type": "SharedSlice"
-            },
-            "pricing_block": {
-              "type": "SharedSlice"
-            },
-            "testimonial": {
-              "type": "SharedSlice"
-            },
-            "testimonial_cta": {
-              "type": "SharedSlice"
-            },
             "pricing_showcase": {
               "type": "SharedSlice"
             }

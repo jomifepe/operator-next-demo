@@ -69,13 +69,7 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PageDocumentDataSlicesSlice =
-  | RichTextSlice
-  | TestimonialsSlice
-  | PricingBlockSlice
-  | TestimonialSlice
-  | TestimonialCtaSlice
-  | PricingShowcaseSlice;
+type PageDocumentDataSlicesSlice = RichTextSlice | PricingShowcaseSlice;
 
 /**
  * Content for Page documents
@@ -315,131 +309,6 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
-/**
- * Primary content in *TestimonialCta → Testimonial → Primary*
- */
-export interface TestimonialCtaSliceTestimonialPrimary {
-  /**
-   * Quote field in *TestimonialCta → Testimonial → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Enter the testimonial quote
-   * - **API ID Path**: testimonial_cta.testimonial.primary.quote
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  quote: prismic.RichTextField;
-
-  /**
-   * Avatar field in *TestimonialCta → Testimonial → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonial_cta.testimonial.primary.avatar
-   * - **Documentation**: https://prismic.io/docs/fields/image
-   */
-  avatar: prismic.ImageField<never>;
-
-  /**
-   * Author Name field in *TestimonialCta → Testimonial → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Enter author name
-   * - **API ID Path**: testimonial_cta.testimonial.primary.authorName
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  authorName: prismic.KeyTextField;
-
-  /**
-   * Author Role field in *TestimonialCta → Testimonial → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Enter author role or description
-   * - **API ID Path**: testimonial_cta.testimonial.primary.authorRole
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  authorRole: prismic.KeyTextField;
-}
-
-/**
- * Testimonial variation for TestimonialCta Slice
- *
- * - **API ID**: `testimonial`
- * - **Description**: Testimonial variation with quote, avatar, author name and role
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type TestimonialCtaSliceTestimonial = prismic.SharedSliceVariation<
-  "testimonial",
-  Simplify<TestimonialCtaSliceTestimonialPrimary>,
-  never
->;
-
-/**
- * Primary content in *TestimonialCta → Call to Action → Primary*
- */
-export interface TestimonialCtaSliceCallToActionPrimary {
-  /**
-   * Heading field in *TestimonialCta → Call to Action → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Enter heading
-   * - **API ID Path**: testimonial_cta.callToAction.primary.heading
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  heading: prismic.RichTextField;
-
-  /**
-   * Description field in *TestimonialCta → Call to Action → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Enter description text
-   * - **API ID Path**: testimonial_cta.callToAction.primary.description
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Button field in *TestimonialCta → Call to Action → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: Select button link
-   * - **API ID Path**: testimonial_cta.callToAction.primary.button
-   * - **Documentation**: https://prismic.io/docs/fields/link
-   */
-  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
-}
-
-/**
- * Call to Action variation for TestimonialCta Slice
- *
- * - **API ID**: `callToAction`
- * - **Description**: CTA variation with heading, description and button
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type TestimonialCtaSliceCallToAction = prismic.SharedSliceVariation<
-  "callToAction",
-  Simplify<TestimonialCtaSliceCallToActionPrimary>,
-  never
->;
-
-/**
- * Slice variation for *TestimonialCta*
- */
-type TestimonialCtaSliceVariation =
-  | TestimonialCtaSliceTestimonial
-  | TestimonialCtaSliceCallToAction;
-
-/**
- * TestimonialCta Shared Slice
- *
- * - **API ID**: `testimonial_cta`
- * - **Description**: A versatile slice for displaying testimonials or call-to-action sections
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type TestimonialCtaSlice = prismic.SharedSlice<
-  "testimonial_cta",
-  TestimonialCtaSliceVariation
->;
-
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -473,12 +342,6 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
-      TestimonialCtaSlice,
-      TestimonialCtaSliceTestimonialPrimary,
-      TestimonialCtaSliceCallToActionPrimary,
-      TestimonialCtaSliceVariation,
-      TestimonialCtaSliceTestimonial,
-      TestimonialCtaSliceCallToAction,
     };
   }
 }

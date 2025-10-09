@@ -5,5 +5,4 @@ import dynamic from "next/dynamic";
 export const components = {
   pricing_showcase: dynamic(() => import("./PricingShowcase")),
   rich_text: dynamic(() => import("./RichText")),
-  testimonial_cta: dynamic(() => import("./TestimonialCta")),
 };
