@@ -1,0 +1,85 @@
+.testimonial {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  padding: 134.4px 76.8px;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  max-width: 1536px;
+  width: 100%;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 38.4px;
+  max-width: 921.6px;
+  width: 100%;
+}
+
+.quote {
+  align-self: stretch;
+  color: #1a1523;
+  font-family: 'Satoshi-Bold', Helvetica, Arial, sans-serif;
+  font-size: 28.8px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 40.3px;
+  margin: 0;
+  text-align: center;
+}
+
+.author {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 19.2px;
+  width: 360px;
+}
+
+.avatar {
+  height: 76.8px;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 76.8px;
+}
+
+.authorInfo {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.authorName {
+  align-self: stretch;
+  color: #1a1523;
+  font-family: 'Satoshi-Bold', Helvetica, Arial, sans-serif;
+  font-size: 19.2px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 28.8px;
+  text-align: center;
+}
+
+.authorDescription {
+  align-self: stretch;
+  color: #1a1523;
+  font-family: 'Satoshi-Regular', Helvetica, Arial, sans-serif;
+  font-size: 19.2px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28.8px;
+  margin: 0;
+  text-align: center;
+}
