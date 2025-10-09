@@ -72,7 +72,8 @@ type ContentRelationshipFieldWithData<
 type PageDocumentDataSlicesSlice =
   | RichTextSlice
   | TestimonialsSlice
-  | PricingBlockSlice;
+  | PricingBlockSlice
+  | TestimonialSlice;
 
 /**
  * Content for Page documents
@@ -399,6 +400,81 @@ export type RichTextSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Testimonial → Default → Primary*
+ */
+export interface TestimonialSliceDefaultPrimary {
+  /**
+   * Quote field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the testimonial quote...
+   * - **API ID Path**: testimonial.default.primary.quote
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  quote: prismic.RichTextField;
+
+  /**
+   * Avatar field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.default.primary.avatar
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  avatar: prismic.ImageField<never>;
+
+  /**
+   * Author Name field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter author name...
+   * - **API ID Path**: testimonial.default.primary.author_name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  author_name: prismic.KeyTextField;
+
+  /**
+   * Author Description field in *Testimonial → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter author description...
+   * - **API ID Path**: testimonial.default.primary.author_description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  author_description: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Testimonial Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default testimonial variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TestimonialSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TestimonialSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Testimonial*
+ */
+type TestimonialSliceVariation = TestimonialSliceDefault;
+
+/**
+ * Testimonial Shared Slice
+ *
+ * - **API ID**: `testimonial`
+ * - **Description**: A testimonial section with a quote, avatar image, author name, and description
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TestimonialSlice = prismic.SharedSlice<
+  "testimonial",
+  TestimonialSliceVariation
+>;
+
+/**
  * Item in *Testimonials → Default → Primary → Testimonials*
  */
 export interface TestimonialsSliceDefaultPrimaryTestimonialsItem {
@@ -543,6 +619,10 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      TestimonialSlice,
+      TestimonialSliceDefaultPrimary,
+      TestimonialSliceVariation,
+      TestimonialSliceDefault,
       TestimonialsSlice,
       TestimonialsSliceDefaultPrimaryTestimonialsItem,
       TestimonialsSliceDefaultPrimary,
