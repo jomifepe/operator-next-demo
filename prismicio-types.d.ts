@@ -74,7 +74,8 @@ type PageDocumentDataSlicesSlice =
   | TestimonialsSlice
   | PricingBlockSlice
   | TestimonialSlice
-  | TestimonialCtaSlice;
+  | TestimonialCtaSlice
+  | PricingShowcaseSlice;
 
 /**
  * Content for Page documents
@@ -147,6 +148,127 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Primary content in *PricingShowcase → Default → Primary*
+ */
+export interface PricingShowcaseSliceDefaultPrimary {
+  /**
+   * Testimonial Quote field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter the testimonial quote
+   * - **API ID Path**: pricing_showcase.default.primary.testimonialQuote
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  testimonialQuote: prismic.RichTextField;
+
+  /**
+   * Testimonial Avatar field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing_showcase.default.primary.testimonialAvatar
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  testimonialAvatar: prismic.ImageField<never>;
+
+  /**
+   * Author Name field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter author name
+   * - **API ID Path**: pricing_showcase.default.primary.testimonialAuthorName
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonialAuthorName: prismic.KeyTextField;
+
+  /**
+   * Author Role field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Enter author role or description
+   * - **API ID Path**: pricing_showcase.default.primary.testimonialAuthorRole
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  testimonialAuthorRole: prismic.KeyTextField;
+
+  /**
+   * Pricing Image field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing_showcase.default.primary.pricingImage
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  pricingImage: prismic.ImageField<never>;
+
+  /**
+   * CTA Heading field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter CTA heading
+   * - **API ID Path**: pricing_showcase.default.primary.ctaHeading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  ctaHeading: prismic.RichTextField;
+
+  /**
+   * CTA Description field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Enter CTA description
+   * - **API ID Path**: pricing_showcase.default.primary.ctaDescription
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  ctaDescription: prismic.RichTextField;
+
+  /**
+   * CTA Button field in *PricingShowcase → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Select button link
+   * - **API ID Path**: pricing_showcase.default.primary.ctaButton
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  ctaButton: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for PricingShowcase Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default variation
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingShowcaseSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PricingShowcaseSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PricingShowcase*
+ */
+type PricingShowcaseSliceVariation = PricingShowcaseSliceDefault;
+
+/**
+ * PricingShowcase Shared Slice
+ *
+ * - **API ID**: `pricing_showcase`
+ * - **Description**: A comprehensive pricing showcase section with testimonial, pricing image, and call-to-action
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingShowcaseSlice = prismic.SharedSlice<
+  "pricing_showcase",
+  PricingShowcaseSliceVariation
+>;
 
 /**
  * Primary content in *RichText → Default → Primary*
@@ -343,6 +465,10 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      PricingShowcaseSlice,
+      PricingShowcaseSliceDefaultPrimary,
+      PricingShowcaseSliceVariation,
+      PricingShowcaseSliceDefault,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,

@@ -41,6 +41,9 @@
             },
             "testimonial_cta": {
               "type": "SharedSlice"
+            },
+            "pricing_showcase": {
+              "type": "SharedSlice"
             }
           }
         }
