@@ -1,0 +1,81 @@
+{
+  "id": "pricing_showcase",
+  "type": "SharedSlice",
+  "name": "PricingShowcase",
+  "description": "A comprehensive pricing showcase section with testimonial, pricing image, and call-to-action",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default variation",
+      "imageUrl": "",
+      "primary": {
+        "testimonialQuote": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Testimonial Quote",
+            "single": "paragraph",
+            "placeholder": "Enter the testimonial quote"
+          }
+        },
+        "testimonialAvatar": {
+          "type": "Image",
+          "config": {
+            "label": "Testimonial Avatar",
+            "constraint": {
+              "width": 300,
+              "height": 300
+            }
+          }
+        },
+        "testimonialAuthorName": {
+          "type": "Text",
+          "config": {
+            "label": "Author Name",
+            "placeholder": "Enter author name"
+          }
+        },
+        "testimonialAuthorRole": {
+          "type": "Text",
+          "config": {
+            "label": "Author Role",
+            "placeholder": "Enter author role or description"
+          }
+        },
+        "pricingImage": {
+          "type": "Image",
+          "config": {
+            "label": "Pricing Image"
+          }
+        },
+        "ctaHeading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "CTA Heading",
+            "single": "heading2",
+            "placeholder": "Enter CTA heading"
+          }
+        },
+        "ctaDescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "CTA Description",
+            "multi": "paragraph,strong,em,hyperlink",
+            "placeholder": "Enter CTA description"
+          }
+        },
+        "ctaButton": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Button",
+            "allowText": true,
+            "placeholder": "Select button link",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

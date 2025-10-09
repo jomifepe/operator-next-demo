@@ -1,0 +1,103 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"testimonialQuote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem ipsum dolor sit amet consectetur. Ornare libero massa congue blandit. Ac eros vitae nibh metus. Iaculis auctor cras phasellus sit luctus bibendum."
+						}
+					}
+				]
+			},
+			"testimonialAvatar": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+					"width": 3500,
+					"height": 2338
+				},
+				"url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?rect=581%2C0%2C2338%2C2338&w=300&h=300",
+				"width": 300,
+				"height": 300,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 581,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "Avatar image"
+			},
+			"testimonialAuthorName": {
+				"__TYPE__": "FieldContent",
+				"value": "Denis",
+				"type": "Text"
+			},
+			"testimonialAuthorRole": {
+				"__TYPE__": "FieldContent",
+				"value": "A fake user, but real insight",
+				"type": "Text"
+			},
+			"pricingImage": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+					"width": 4000,
+					"height": 6000
+				},
+				"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+				"width": 4000,
+				"height": 6000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "Pricing"
+			},
+			"ctaHeading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Ready to go further?"
+						}
+					}
+				]
+			},
+			"ctaDescription": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "This starter gives you full editing power for content. To customize the layout, structure, or create new Slices, install Slice Machine locally."
+						}
+					}
+				]
+			},
+			"ctaButton": {
+				"__TYPE__": "LinkContent",
+				"key": "c6c669fb-6cb0-48cc-995a-2e92b002c897",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "Edit this section now"
+				}
+			}
+		},
+		"items": []
+	}
+]
